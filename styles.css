@@ -1,0 +1,139 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 1s ease-in-out;
+}
+
+/* App Container */
+#app {
+  text-align: center;
+  width: 90%;
+  max-width: 650px;
+}
+
+/* Header Section */
+#header {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  width: 70%;
+  border: 2px solid #00d4ff;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: #fff;
+  background: #00c853;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #00ff88;
+}
+
+/* Weather Card */
+#weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+  display: none; /* Hidden initially */
+}
+
+#weather-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+#icon {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  #header {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  #weather-card {
+    padding: 15px;
+  }
+
+  #icon {
+    font-size: 5em;
+  }
+
+  #weather-card p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+    #app #header h1{
+        font-size: 1.3em;
+
+    }
+  input[type="text"] {
+    padding: 5px;
+    font-size: 1em;
+  }
+
+  button {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1.2em;
+  }
+
+  #icon {
+    font-size: 5.5em;
+  }
+
+  #weather-card p {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
